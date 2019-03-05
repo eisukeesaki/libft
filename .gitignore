@@ -1,11 +1,27 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
 # MacOS Desktop Services Store
 .DS_Store
+._.DS_Store
 
 # VSCode
 .vscode/
 
+# code from other people's GitHub
+_example/
+
 # Prerequisites
 *.d
+
+# swap files
+*.swp
 
 # Object files
 *.o

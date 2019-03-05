@@ -1,9 +1,10 @@
 NAME = libft.a
 
-SRC = ft_atoi.c ft_strcpy.c ft_strlen.c ft_strstr.c ft_strcat.c ft_strcmp.c \
-		ft_strncat.c 
+SRC = ft_atoi.c ft_strcat.c ft_strcmp.c ft_strcpy.c ft_strlen.c ft_strncat.c \
+		ft_strncmp.c ft_strncpy.c ft_strstr.c ft_strlcat.c
 
-OBJ = ft_atoi.o ft_strcpy.o ft_strlen.o ft_strstr.o
+OBJ = ft_atoi.o ft_strcat.o ft_strcmp.o ft_strcpy.o ft_strlen.o ft_strncat.o \
+		ft_strncmp.o ft_strncpy.o ft_strstr.o ft_strlcat.o
 
 # SRC = ft_atoi.c ft_atoi_base.c ft_bzero.c ft_dup.c ft_isalnum.c \
 # 		ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c ft_isprint.c \

@@ -12,20 +12,21 @@
 
 #include <stddef.h>
 
-char	*ft_strncat(char *s1, char const *s2, size_t n)
+char	*ft_strncat(char *dst, const char *src, size_t n)
 {
-	int		i;
+	size_t	i;
+	size_t	k;
 	
 	i = 0;
-	while(s1[i] != '\0')
+	k = 0;
+	while(dst[i] != '\0')
 		i++;
-	while (n > 0)
+	while (src[k] && k < n)
 	{
-		s1[i] = *s2;
+		dst[i] = src[k];
 		i++;
-		s2++;
-		n--;
+		k++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	dst[i] = '\0';
+	return (dst);
 }
