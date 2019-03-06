@@ -15,7 +15,7 @@
 .vscode/
 
 # code from other people's GitHub
-_example/
+#_example/
 
 # Prerequisites
 *.d
