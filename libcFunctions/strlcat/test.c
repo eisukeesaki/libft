@@ -2,9 +2,12 @@
 
 int		main(void)
 {
-	int i = 0;
-	for (i = 0; i < 3; i++)
-		printf("hello\n");
+	char s[7] = "abc";
+	char *pts = s;
 
+	printf("  s->%lu\n", sizeof(s) / sizeof(s[0]));
+	printf("pts->%lu\n", sizeof(pts) / sizeof(pts[0]));
+	
+	
 	return (0);
 }
