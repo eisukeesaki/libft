@@ -10,17 +10,38 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcpy(char *to, char *from)
+#include <stdio.h> // debug purpose
+#include <string.h> // debug purpose
+
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int		i;
+	int	i;
 
 	i = 0;
-	while (from[i] != '\0')
+	while (src[i])
 	{
-		to[i] = from[i];
+		dst[i] = src[i];
 		i++;
 	}
-
-	return (*to);
+	dst[i] = '\0';
+	return (dst);
 }
 
+// debug purpose
+int		main(void)
+{
+	char	*src = "--> nyancat <--\n\r";
+	char	dst1[30];
+	char	dst2[30];
+
+	char	*libc;
+	char	*ft;
+
+	libc = ft_strcpy(dst1, src);
+	ft = ft_strcpy(dst2, src);
+
+	printf("libc->%s\n  ft->%s\n", libc, ft);
+
+	return (0);
+}
+// debug purpose

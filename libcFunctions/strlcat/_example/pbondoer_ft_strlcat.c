@@ -27,11 +27,11 @@ int		main(void)
 	// char s1[7] = "abc";
 	// char s2[4] = "123";
 
-	char ft_s1[7] = "abc";
+	char ft_s1[7] = "abcdef";
 	char ft_s2[4] = "123";
 
 	// printf("   strlcat->%lu\n", strlcat(s1, s2, 8));
-	printf("ft_strlcat->%lu\n", ft_strlcat(ft_s1, ft_s2, 8));
-
+	printf("return value->%lu\nft_s1->%s", ft_strlcat(ft_s1, ft_s2, 8), ft_s1);
+	
 	return (0);
 }

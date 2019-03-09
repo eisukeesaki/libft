@@ -11,11 +11,6 @@ char	*ft_strncat(char *dst, const char *src, size_t n)
 	k = 0;
 	while(dst[i] != '\0')
 		i++;
-	while(src[k] != '\0')
-		k++;
-	if ((sizeof(dst) / sizeof(dst[0])) < n)
-		abort();
-	k = 0;
 	while (src[k] && k < n)
 	{
 		dst[i] = src[k];
