@@ -2,6 +2,8 @@
 # define LIBFT_H
 # include <string.h>
 
+int		ft_iswhitespace(char c);
+int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, char *src, size_t n);

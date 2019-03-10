@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,30 +10,52 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h> // debug purpose
+// #include <stdlib.h> // debug purpose
+#include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
-	int		val;
-	int		flag;
-	int		sign;
+	unsigned long long	n;
+	unsigned 			neg;
+	unsigned long long	max;
+	
+	n = 0;
+	neg = 0;
+	max = 9223372036854775807;
 
-	val = 0;
-	flag = 0;
-	sign = 1;
-	if (*str == '-')
-		sign = -1;
-	while (*str)
+	while (ft_iswhitespace(*str))
+		str++;
+	
+	neg = (*str == '-');
+
+	if (*str == '-' || *str == '+')
+		str++;
+
+	while (ft_isdigit(*str))
 	{
-		if (*str >= '0' && *str <= '9')
-		{
-			val *= 10;
-			val += *str - '0';
-			flag = 1;
-		}
-		else if (flag)
-			break;
+		n = (n * 10) + (*str - '0');
 		str++;
 	}
-	return (val * sign);
+	
+	if ((neg == 0 && n > max) || (neg == 1 && n > max + 1))
+		return (neg ? 0 : -1);
+
+	return (neg ? -n : n);
 }
+
+// test purpose
+// int		main(void)
+// {
+// 	char	*n = "-9223372036854775808";
+
+// 	printf("libc->%d\n", atoi(n));
+// 	printf("  ft->%d\n", ft_atoi(n));
+
+// 	return (0);
+// }
+// test purpose
+
+// notes
+// min: -9223372036854775808
+// max: 9223372036854775807
