@@ -1,15 +1,16 @@
 NAME = libft.a
 
 SRC = ft_atoi.c ft_strcat.c ft_strcmp.c ft_strcpy.c ft_strlen.c ft_strncat.c \
-		ft_strncmp.c ft_strncpy.c ft_strstr.c ft_strlcat.c 
+		ft_strncmp.c ft_strncpy.c ft_strstr.c ft_strlcat.c ft_isdigit.c \
+		ft_isalpha.c
 
-DEP = ft_iswhitespace.c ft_isdigit.c
+DEP = ft_iswhitespace.c 
 
 OBJ = ft_atoi.o ft_strcat.o ft_strcmp.o ft_strcpy.o ft_strlen.o ft_strncat.o \
 		ft_strncmp.o ft_strncpy.o ft_strstr.o ft_strlcat.o ft_iswhitespace.o \
-		ft_isdigit.o
+		ft_isdigit.o ft_isalpha.o
 
-DOBJ = ft_iswhitespace.o ft_isdigit.o
+DOBJ = ft_iswhitespace.o
 
 # SRC = ft_atoi.c ft_atoi_base.c ft_bzero.c ft_dup.c ft_isalnum.c \
 # 		ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c ft_isprint.c \
