@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<debug purpose
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>debug purpose
 
 // char *ft_strdup(const char *s1)
@@ -21,12 +21,12 @@
 // }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<test purpose
-int		main(void)
-{
-	char str[4] = "abc";
+// int		main(void)
+// {
+// 	char str[4] = "abc";
 
-	printf("libc:\nstring->%s\n   str->%p\nstrdup->%p\n", strdup(str), str, strdup(str));
+// 	printf("libc:\nstring->%s\n   str->%p\nstrdup->%p\n", strdup(str), str, strdup(str));
 
-	return (0);
-}
+// 	return (0);
+// }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>test purpose
