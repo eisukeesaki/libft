@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 17:24:11 by eesaki            #+#    #+#             */
-/*   Updated: 2019/02/14 17:24:40 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/15 13:18:17 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,15 @@ int		ft_atoi(const char *str)
 }
 
 // test purpose
-// int		main(void)
-// {
-// 	char	*n = "-9223372036854775808";
+int		main(void)
+{
+	char	*n = "-9223372036854775808";
 
-// 	printf("libc->%d\n", atoi(n));
-// 	printf("  ft->%d\n", ft_atoi(n));
+	printf("libc->%d\n", atoi(n));
+	printf("  ft->%d\n", ft_atoi(n));
 
-// 	return (0);
-// }
+	return (0);
+}
 // test purpose
 
 // notes

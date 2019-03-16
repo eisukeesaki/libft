@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/14 16:59:21 by eisuke            #+#    #+#             */
-/*   Updated: 2019/03/15 20:39:36 by eesaki           ###   ########.fr       */
+/*   Created: 2019/03/15 12:12:31 by eesaki            #+#    #+#             */
+/*   Updated: 2019/03/15 20:32:44 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	while (len > 0)
+	while (n > 0)
 	{
-		len--;
-		((unsigned char *)b)[len] = (unsigned char)c;
+		n--;
+		((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
 	}
-	return (b);
+	return (dst);
 }
-
-// void	*ft_memset(void *b, int c, size_t len)
-// {
-// 	int	i;
-	
-// 	i = 0;
-// 	while (len > 0)
-// 	{
-// 		((unsigned char *)b)[i] = (unsigned char)c;
-// 		i++;
-// 		len--;
-// 	}
-// 	return (b);
-// }
