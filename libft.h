@@ -1,5 +1,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stddef.h>
+# include <unistd.h>
 # include <string.h>
 
 int		ft_iswhitespace(char c);
@@ -30,5 +32,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 
 #endif
