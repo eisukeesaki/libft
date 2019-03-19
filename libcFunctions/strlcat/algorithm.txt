@@ -1,4 +1,0 @@
-int ft_strstrl(char *dst, char *src, size_t dstsize)
-
-- find EOS of dst
-- assign elms of src * dstsize

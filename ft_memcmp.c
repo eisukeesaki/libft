@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/14 16:59:21 by eisuke            #+#    #+#             */
-/*   Updated: 2019/03/15 20:39:36 by eesaki           ###   ########.fr       */
+/*   Created: 2019/03/19 15:03:44 by eesaki            #+#    #+#             */
+/*   Updated: 2019/03/19 15:38:43 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (len > 0)
-	{
-		len--;
-		((unsigned char *)b)[len] = (unsigned char)c;
-	}
-	return (b);
-}
-
-// void	*ft_memset(void *b, int c, size_t len)
-// {
-// 	int	i;
+	int	i;
 	
-// 	i = 0;
-// 	while (len > 0)
-// 	{
-// 		((unsigned char *)b)[i] = (unsigned char)c;
-// 		i++;
-// 		len--;
-// 	}
-// 	return (b);
-// }
+	i = 0;
+	while (n--)
+	{
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
+	}
+	return (0);	
+}
