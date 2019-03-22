@@ -36,5 +36,8 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putnbr(int n);
 
 #endif
