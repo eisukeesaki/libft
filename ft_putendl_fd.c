@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/21 14:25:06 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/22 11:48:22 by eesaki           ###   ########.fr       */
+/*   Created: 2019/03/22 11:52:29 by eesaki            #+#    #+#             */
+/*   Updated: 2019/03/22 11:59:18 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	if (s == NULL)
-		return;
-	write (1, s, ft_strlen(s));
+	ft_putstr_fd(s,fd);
+	ft_putchar_fd('\n', fd);
 }
