@@ -3,6 +3,7 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_iswhitespace(char c);
 int		ft_isdigit(int c);
@@ -45,4 +46,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+void	* ft_memalloc(size_t size);
+
 #endif
