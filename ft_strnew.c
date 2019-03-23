@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/22 19:19:21 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/22 19:56:08 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/23 12:07:56 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 char	* ft_strnew(size_t size)
 {
-	void *	mem;
-
-	if (!(mem = malloc(size)))
-		return (NULL);
-	return (ft_memalloc((char *)));
+	return ((char *)ft_memalloc(size + 1));
 }
