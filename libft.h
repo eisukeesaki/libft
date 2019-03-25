@@ -46,9 +46,11 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-void	* ft_memalloc(size_t size);
-char	* ft_strnew(size_t size);
+void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
 void	ft_memdel(void **ap);
 void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
 
 #endif
