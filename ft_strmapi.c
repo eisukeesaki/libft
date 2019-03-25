@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/24 16:21:41 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/25 14:47:11 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/25 15:55:29 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char		*new;
 
 	i = 0;
-	new = NULL;
 	if (!s || !f)
 		return (NULL);
 	new = ft_strnew(strlen(s));
