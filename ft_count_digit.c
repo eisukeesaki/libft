@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_count_digit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 19:35:49 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/26 18:59:36 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/26 18:46:31 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+size_t	ft_count_digit(long n)
 {
-	long		nb;
-	size_t		dgt;
-	char		*s;
-	unsigned	neg;
-
-	nb = n;
-	neg = n < 0 ? 1 : 0;
-	dgt = ft_count_digit(nb);
-	s = ft_strnew(dgt + neg);
-	if (!s)
-		return (NULL);
-	if (neg)
+	size_t	i;
+	
+	i = 1;
+	if (n < 0)
+		n = -n;
+	while (n >= 10)
 	{
-		nb = -nb;
-		s[0] = '-';
+		i++;
+		n /=10;
 	}
-	while (dgt > 0)
-	{
-		s[dgt + neg - 1] = (nb % 10) + '0';
-		dgt--;
-		nb /= 10;
-	}
-	return (s);
+	return (i);
 }
