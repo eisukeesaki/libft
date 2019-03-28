@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 19:13:19 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/27 12:45:32 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/27 13:14:15 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int	head;
-	int	tail;
+	int		head;
+	int		tail;
 	char	*str;
 
 	if (!s)
