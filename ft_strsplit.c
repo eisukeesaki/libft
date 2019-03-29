@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 12:51:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/27 20:42:12 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/28 20:02:52 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@
 // 	while (s[ctdlm] != c) // implement exception: beggining & end
 // 		ctdlm++;
 
-// 	while (ctdlm-- > 0)
-// 	{
 // 		while (s[i] != c)
 // 			i++;
 
@@ -51,145 +49,6 @@
 // 	}
 	
 // }
-
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<pbondoer
-
-int		ft_countwords(char *str, char sep)
-{
-	int result;
-	int i;
-
-	i = 0;
-	result = 0;
-	while (str[i] && str[i] == sep)
-		i++;
-	while (str[i])
-	{
-		while (str[i] && str[i] != sep)
-			i++;
-		result++;
-		while (str[i] && str[i] == sep)
-			i++;
-	}
-	return (result);
-}
-
-void	ft_strdel(char **as)
-{
-	ft_memdel((void **)as);
-}
-
-static size_t	word_len(char const *s, char c)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
-}
-
-static char		*next_word(char const *s, char c)
-{
-	while (*s && *s == c)
-		s++;
-	return ((char *)s);
-}
-
-static void		cleanup(char **split, size_t cur)
-{
-	while (cur > 0)
-	{
-		cur--;
-		ft_strdel(&split[cur]);
-	}
-	ft_strdel(split);
-}
-
-char			**ft_strsplit(char const *s, char c)
-{
-	char	**split;
-	size_t	cur;
-	size_t	wordcount;
-
-	wordcount = ft_countwords((char *)s, c);
-	split = (char **)ft_memalloc((wordcount + 1) * sizeof(char *));
-	if (split == NULL)
-		return (NULL);
-	cur = 0;
-	while (cur < wordcount)
-	{
-		s = next_word(s, c);
-		split[cur] = ft_strsub(s, 0, word_len(s, c));
-		if (split[cur] == NULL)
-		{
-			cleanup(split, cur);
-			return (NULL);
-		}
-		cur++;
-		s += word_len(s, c);
-	}
-	split[wordcount] = NULL;
-	return (split);
-}
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>pbondoer
-
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<logankaser
-// static int		word_size(const char *chr, char d)
-// {
-// 	int size;
-
-// 	size = 0;
-// 	while (*chr && *chr != d)
-// 	{
-// 		++size;
-// 		++chr;
-// 	}
-// 	return (size);
-// }
-
-// static size_t	num_words(const char *str, char d)
-// {
-// 	size_t num;
-
-// 	num = 0;
-// 	while (*str)
-// 	{
-// 		if (*str != d && (*(str + 1) == d || *(str + 1) == '\0'))
-// 			++num;
-// 		++str;
-// 	}
-// 	return (num);
-// }
-
-// char			**ft_strsplit(const char *str, const char d)
-// {
-// 	char		**split_words;
-// 	size_t		size;
-// 	size_t		w_size;
-// 	unsigned	w;
-// 	unsigned	chr;
-
-// 	size = num_words(str, d) + 1;
-// 	NULL_GUARD(split_words = malloc(sizeof(char*) * size));
-// 	w = 0;
-// 	while (w < size - 1)
-// 	{
-// 		while (*str == d)
-// 			++str;
-// 		w_size = word_size(str, d);
-// 		split_words[w] = malloc(w_size + 1);
-// 		NULL_GUARD(split_words[w]);
-// 		split_words[w][w_size] = '\0';
-// 		chr = 0;
-// 		while (chr < w_size)
-// 			split_words[w][chr++] = *str++;
-// 		++w;
-// 	}
-// 	split_words[size - 1] = 0;
-// 	return (split_words);
-// }
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>logankaser
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<test purpose
 int		main(void)
@@ -212,13 +71,12 @@ int		main(void)
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>test purpose
 
 /**
- * find head
- * find tail
- * count nb of dlm
- * scan from head todlm 
- * store dlm position
- * store range of str
- * strnew and assign str
- * scan from last found dlm to nextdlm 
- * repeat until tail
+- count words
+- allocate memory for all words (nb of words + 1)
+	- protect
+1 find next word to assign
+2 assign ptr(of freshly created str) to word
+3 move ptr(of original str) to dlm
+- repeat from 1 until last word is assigned
+- assign NULL to last space for words to return
  **/
