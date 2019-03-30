@@ -5,8 +5,6 @@
 # include <string.h>
 # include <stdlib.h>
 
-// # define NULL_GUARD(a) if(!(a)) return (NULL); // logankaser
-
 int		ft_iswhitespace(char c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
