@@ -5,7 +5,7 @@
 # include <string.h>
 # include <stdlib.h>
 
-# define NULL_GUARD(a) if(!(a)) return (NULL); // logankaser
+// # define NULL_GUARD(a) if(!(a)) return (NULL); // logankaser
 
 int		ft_iswhitespace(char c);
 int		ft_isdigit(int c);
@@ -61,5 +61,6 @@ char	*ft_itoa(int n);
 size_t	ft_count_digit(long n);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
+size_t	ft_words(char const *s, char d);
 
 #endif
