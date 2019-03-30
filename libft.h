@@ -61,6 +61,5 @@ char	*ft_itoa(int n);
 size_t	ft_count_digit(long n);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
-// void	ft_strsplit(char const *s, char c);
 
 #endif

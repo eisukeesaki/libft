@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 12:51:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/28 20:02:52 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/29 18:03:15 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,44 +16,69 @@
 
 #include "libft.h"
 
-// char	**ft_strsplit(char const *s, char c)
+static inline size_t	ft_words(char const *s, char d)
+{
+	size_t	w;
+
+	w = 0;
+	while (*s == d && *s)
+		s++;
+	while (*s)
+	{
+		while (*s != d && *s)
+			s++;
+		w++;
+		while (*s == d && *s)
+			s++;
+	}
+	return (w);
+}
+
+static inline size_t	wordlen(char const *s, char d)
+{
+	size_t l;
+
+	l = 0;
+	while (s[l] && s[l] != d)
+		l++;
+	return (l);
+}
+
+static inline char	*next_word(char const *s, char d)
+{
+	while (*s == d && *s)
+		s++;
+	return ((char *)s);
+}
+
 // void	ft_strsplit(char const *s, char c) /////////////////////// debug purpose
-// {
-// 	size_t	i;
-// 	size_t	head;
-// 	// size_t	tail;
-// 	size_t	ctdlm;
-// 	size_t	strnb;
-// 	size_t	strsi;
-// 	char	*strs[3][] = {}; // make init separate
+char	**ft_strsplit(char const *s, char c)
+{
+	char	**split;
+	size_t	wc;
+	size_t	i;
 
-// 	i = 0;
-// 	head = 0;
-// 	// tail = 0;
-// 	ctdlm = 0;
-// 	strnb = 0;
-// 	strsi = 0;
-
-// 	while (s[ctdlm] != c) // implement exception: beggining & end
-// 		ctdlm++;
-
-// 		while (s[i] != c)
-// 			i++;
-
-// 		strs[strnb] = ft_strnew(i - head);
-
-// 		while (s[head] != c)
-// 			strs[strnb++][strsi++] = s[head++];
-		
-// 		strnb++;
-// 	}
-	
-// }
+	if (!s)
+		return (NULL);
+	i = 0;
+	wc = ft_words(s, c);
+	if (!(split = (char **)ft_memalloc((wc + 1) * sizeof(char *))))
+		return (NULL);
+	while (i < wc)
+	{
+		s = next_word((char *)s, c);
+		split[i] = ft_strsub(s, 0, wordlen(s, c));
+		i++;
+		s += wordlen(s, c);
+	}
+	split[wc] = NULL;
+	return (split);
+}
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<test purpose
 int		main(void)
 {
-	char	str[] = "dc2,dc5,ek9";
+	char	str[] = ",pasu,,chobi,nachan,";
 	char	dlm = ',';
 	char	**dstr = NULL;
 	size_t	i = 0;
@@ -65,10 +90,25 @@ int		main(void)
 		printf("%s\n", dstr[i]);
 		i++;
 	}
-	
+
+	ft_strsplit(str, dlm);
+
 	return (0);
 }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>test purpose
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ft_words, wordlen test
+// int		main(void)
+// {
+// 	char	str[] = "pasu,,chobi,nachan";
+// 	char	dlm = ',';
+
+// 	printf("ft_words->%zu\n", ft_words(str, dlm));
+// 	printf("wordlen->%zu\n", wordlen(str, dlm));
+
+// 	return (0);
+// }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ft_words, wordlen test
 
 /**
 - count words
