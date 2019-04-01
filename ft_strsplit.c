@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 12:51:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/29 19:47:12 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/31 16:12:47 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	wc = ft_words(s, c);
-	if (!(split = (char **)ft_memalloc((wc + 1) * sizeof(char *))))
+	if (!(split = ft_memalloc((wc + 1) * sizeof(char *))))
 		return (NULL);
 	while (i < wc)
 	{

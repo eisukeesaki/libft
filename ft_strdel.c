@@ -6,51 +6,79 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 15:21:32 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/30 16:42:14 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/03/31 16:35:46 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<test purpose
 #include <stdio.h>
+#include <string.h>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>test purpose
 
-#include "libft.h"
+// #include "libft.h"
 
-void	ft_strdel(char **as)
-{
-	// ft_memdel((void **)as);
-	if (as && *as)
-	{
-		free(*as);
-		*as = NULL;
-	}
-}
+// void	ft_strdel(char **as)
+// {
+// 	// ft_memdel((void **)as);
+// 	if (as && *as)
+// 	{
+// 		free(*as);
+// 		*as = NULL;
+// 	}
+// }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<test purpose
 int		main(void)
 {
-	char	**s;
+	// char	*p;
+
+	// p = (char *)malloc(sizeof(char) * 4);
+
+	// p = strncpy(p, "012345678901234567890123456789", sizeof(char) * 4);
 	
-	// s = (char **)malloc(sizeof(char));
-	s = (char **)malloc(32);
-	if (!s) printf("malloc fail\n");
+	// printf("before->%s\n", p);
 
-	s[1] = "abc";
-	printf("before->%s\n", s[1]);
-	// int	*p;
-	// p = (int *)malloc(sizeof(int));
-	// p = 123;
+	// free(p);
 
-	// char *s[1] = {"s[0]"};
+	// printf("after->%s\n", p);
 
-	// free(s);
+	int	i = 5;
+	int *p_i = &i;
+	int	*p;
 
-	// ft_strdel(&s[0]);
+	p = (int *)malloc(sizeof(int));
 
-	// printf("after->%s\n", s[0]);
+	p = memcpy(p, p_i, 1);
+
+	printf("p%d\n", *p);
 
 	return (0);
 }
+
+// int		main(void)
+// {
+// 	char	**s;
+	
+// 	// s = (char **)malloc(sizeof(char));
+// 	s = (char **)malloc(32);
+// 	if (!s) printf("malloc fail\n");
+
+// 	s[1] = "abc";
+// 	printf("before->%s\n", s[1]);
+// 	// int	*p;
+// 	// p = (int *)malloc(sizeof(int));
+// 	// p = 123;
+
+// 	// char *s[1] = {"s[0]"};
+
+// 	// free(s);
+
+// 	// ft_strdel(&s[0]);
+
+// 	// printf("after->%s\n", s[0]);
+
+// 	return (0);
+// }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>test purpose
 /*
 	s[0] = "012345678901234567890123456789012345678901234567890123456789";
