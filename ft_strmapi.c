@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/24 16:21:41 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/25 15:55:29 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/06 18:49:34 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	new = ft_strnew(strlen(s));
+	new = ft_strnew(ft_strlen(s));
 	if (!new)
 		return (NULL);
 	while (s[i])
