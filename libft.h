@@ -69,5 +69,7 @@ char	**ft_strsplit(char const *s, char c);
 size_t	ft_words(char const *s, char d);
 void	ft_strdel(char **as);
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 #endif
