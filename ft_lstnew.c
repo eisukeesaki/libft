@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 18:07:09 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/10 13:38:58 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/10 17:34:56 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 			return (NULL);
 		}
 		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
 	}
 	else
 	{
 		new->content = NULL;
-		content_size = 0;
+		new->content_size = 0;
 	}
 	new->next = NULL;
 	return (new);
