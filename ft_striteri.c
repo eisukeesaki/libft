@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/24 11:04:54 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/26 18:53:04 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:34:41 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	i = 0;
 	if (!s || !f)
-		return;
+		return ;
 	while (*s)
-	{
 		f(i++, s++);
-	}
 }

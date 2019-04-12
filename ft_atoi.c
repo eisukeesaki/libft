@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 17:24:11 by eesaki            #+#    #+#             */
-/*   Updated: 2019/02/14 17:24:40 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:48:37 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int		ft_atoi(const char *str)
 {
 	unsigned long long	n;
-	unsigned 			neg;
+	unsigned			neg;
 	unsigned long long	max;
-	
+
 	n = 0;
 	neg = 0;
 	max = 9223372036854775807;

@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 20:25:13 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/16 20:37:09 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:37:57 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, sizeof(c));
+	write(fd, &c, sizeof(c));
 }

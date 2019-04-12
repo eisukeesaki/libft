@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 18:46:25 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/12 18:46:26 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:35:30 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n < 1)
 		return (0);

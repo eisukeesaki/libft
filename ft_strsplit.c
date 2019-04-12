@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 12:51:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/31 16:12:47 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:36:17 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static inline size_t	wordlen(char const *s, char d)
 	return (l);
 }
 
-static inline char	*next_word(char const *s, char d)
+static inline char		*next_word(char const *s, char d)
 {
 	while (*s == d && *s)
 		s++;
 	return ((char *)s);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char					**ft_strsplit(char const *s, char c)
 {
 	char	**split;
 	size_t	wc;

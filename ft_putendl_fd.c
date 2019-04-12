@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/22 11:52:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/22 11:59:18 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:43:59 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	ft_putstr_fd(s,fd);
+	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

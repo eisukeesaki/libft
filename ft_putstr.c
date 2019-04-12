@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 14:25:06 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/22 12:47:57 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:33:41 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	ft_putstr(char const *s)
 {
 	if (!s)
-		return;
-	write (1, s, ft_strlen(s));
+		return ;
+	write(1, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 18:07:09 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/10 17:34:56 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 13:55:49 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*new;
+
 	new = ft_memalloc(sizeof(t_list));
 	if (new == NULL)
 		return (NULL);
-
 	if (content != NULL)
 	{
 		new->content = ft_memalloc(content_size);
