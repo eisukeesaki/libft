@@ -6,16 +6,15 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 13:42:18 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 13:55:12 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 16:02:17 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <stdlib.h>
 
 typedef struct		s_list
 {
@@ -40,7 +39,8 @@ char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, char const *src, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strstr(const char *haystack, const char *needle);
-char				*ft_strnstr(const char *hs, const char *nd, size_t len);
+char				*ft_strnstr(const char *haystack, const char *needle,
+																size_t len);
 char				*ft_strcat(char *s1, char const *s2);
 char				*ft_strncat(char *dst, const char *src, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
