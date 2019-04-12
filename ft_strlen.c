@@ -6,11 +6,11 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 11:44:16 by eesaki            #+#    #+#             */
-/*   Updated: 2019/02/12 11:52:56 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 14:14:13 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

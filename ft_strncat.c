@@ -6,11 +6,11 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 18:40:12 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 13:47:11 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 14:14:26 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strncat(char *dst, const char *src, size_t n)
 {

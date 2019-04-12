@@ -6,11 +6,11 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 12:42:33 by eesaki            #+#    #+#             */
-/*   Updated: 2019/03/13 12:42:38 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/04/12 14:13:51 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
