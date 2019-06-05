@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 16:35:08 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 13:36:30 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/06/04 17:09:44 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	char *str;
-	char *sbstr;
+	char	*str;
+	char	*sbstr;
 
 	if (!*needle)
 		return ((char *)haystack);

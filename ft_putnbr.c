@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 16:49:41 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 13:39:53 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/06/04 17:07:55 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ inline static void	output(long n)
 
 void				ft_putnbr(int n)
 {
-	long nb;
+	long	nb;
 
 	nb = n;
 	if (nb < 0)

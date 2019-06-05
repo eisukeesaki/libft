@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 12:51:29 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 16:21:21 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/06/04 17:09:35 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static inline size_t	wordlen(char const *s, char d)
 {
-	size_t l;
+	size_t	l;
 
 	l = 0;
 	while (s[l] && s[l] != d)

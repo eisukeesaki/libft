@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 13:35:09 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 13:35:09 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/06/04 17:08:50 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t k;
+	size_t	i;
+	size_t	k;
 
 	i = 0;
 	k = 0;
