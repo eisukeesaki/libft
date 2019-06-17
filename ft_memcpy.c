@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 12:12:31 by eesaki            #+#    #+#             */
-/*   Updated: 2019/04/12 14:13:17 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/06/16 23:13:38 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
+	if (!dst && !src)
+		return (NULL);
 	while (n > 0)
 	{
 		n--;
