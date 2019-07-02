@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 13:42:18 by eesaki            #+#    #+#             */
-/*   Updated: 2019/06/30 23:54:43 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/07/01 20:00:48 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 char				*ft_strndup(const char *s1, size_t len);
 int					ft_pow(int base, int exponent);
 long double			ft_fmod(long double n, long double div);
+char				*ft_strrev(char *s);
 
 #endif
