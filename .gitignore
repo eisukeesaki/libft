@@ -11,8 +11,9 @@
 .DS_Store
 ._.DS_Store
 
-# VSCode
+# ignore directories
 .vscode/
+tests/
 
 # code from other people's GitHub
 #_example/
