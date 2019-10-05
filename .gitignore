@@ -73,3 +73,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# 42 lab computer specific
+.nfs.*
+
