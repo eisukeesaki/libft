@@ -6,7 +6,7 @@
 /*   By: eesaki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 17:13:04 by eesaki            #+#    #+#             */
-/*   Updated: 2019/10/04 19:59:41 by eesaki           ###   ########.fr       */
+/*   Updated: 2019/10/05 21:06:15 by eesaki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstappend(t_list *alst, t_list *new)
 {
-	alst = ft_lstfindlast(alst);
+	alst = ft_lstfindtail(alst);
 	alst->next = new;
 }
