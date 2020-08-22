@@ -11,17 +11,17 @@ CFLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(SRC) libft.h
-	@echo ">compiling libft without linking"
-	$(CC) $(CFLAGS) -c $(SRC)
-	@echo ">creating libft archive"
-	ar rcs $(NAME) $(OBJ)
+	@$(CC) $(CFLAGS) -c $(SRC)
+	@echo "compiled libft without linking"
+	@ar rcs $(NAME) $(OBJ)
+	@echo "created libft archive"
 
 clean:
-	@echo ">deleting libft object files"
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
+	@echo "deleted libft object files"
 
 fclean:	clean
-	@echo ">deleting libft archive"
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "deleted libft archive"
 
 re: fclean all
