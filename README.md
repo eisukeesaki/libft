@@ -1,6 +1,6 @@
 # What is `libft`?
 
-**This is my own implementation of the Standard C Library. I also built and added my own functions that would be useful for my future C projects.**
+**This is my own implementation of the Standard C Library, along with my original functions that will become useful for my future C projects.**
 
 To maximize my learning experience, I Implemented all of the functions using only the most fundamental functions.
 
