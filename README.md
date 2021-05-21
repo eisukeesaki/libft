@@ -4,9 +4,13 @@
 
 To maximize my learning experience, I Implemented all of the functions using only the most fundamental functions.
 
+- open
+- close
+- read
+- write
 - malloc
 - free
-- write
+- exit
 
 No global variables were used.
 
