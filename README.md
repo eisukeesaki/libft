@@ -12,8 +12,6 @@ It is implemented using only the basic system calls and `libc` functions such as
 - `free`
 - `exit`
 
-No global variables are used.
-
 ## Note
 
 `printf` is in a [different repository](https://github.com/eisukeesaki/ft_printf).
