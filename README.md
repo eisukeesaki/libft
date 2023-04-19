@@ -12,7 +12,7 @@ It is implemented using only the basic system calls and `libc` functions such as
 - `free`
 - `exit`
 
-No global variables is used.
+No global variables are used.
 
 ## Note
 
