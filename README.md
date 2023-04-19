@@ -1,4 +1,4 @@
-# What is `libft`?
+# libft
 
 This is my Standard C Library. It includes functions from `stdio.h`, `stdlib.h`, `type.h`, `string.h` and my original functions.
 
